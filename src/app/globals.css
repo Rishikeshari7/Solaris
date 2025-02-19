@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.baba{
+  color: red;
+}
+/* globals.css */
+:root {
+  --font-geist-sans: "Geist Sans", sans-serif;
+  --font-geist-mono: "Geist Mono", monospace;
+  --font-anek-malayalam: "Anek Malayalam", sans-serif;
+}
+
+body {
+  font-family: var(--font-geist-sans);
+}
+
+.font-anek {
+  font-family: var(--font-anek-malayalam);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Anek Malayalam", sans-serif;
+}
+
+/* Customize scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1B263B; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3A506B; /* Color when hovering over the thumb */
+}
+
+::-webkit-scrollbar-track {
+  background: #030C13; /* Scrollbar track color */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+::-webkit-scrollbar-track:hover {
+  background: #1B263B; /* Track color on hover */
+}
+@keyframes rippleEffect {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
