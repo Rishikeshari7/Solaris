@@ -7,6 +7,7 @@ import { MTLLoader } from "three/examples/jsm/loaders/MTLLoader";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import InputSelection from "../Dashboard/input-slider/page";
 import toast from "react-hot-toast";
+// import Loder from "../Common/Loder";
 
 const ModelViewer = ({
   shadowOpacity = 0.5,
@@ -23,8 +24,9 @@ const ModelViewer = ({
   const [timeOfDay, setTimeOfDay] = useState(5.5);
   const [datetime, setDatetime] = useState("2024-10-26T11:28");
   const [sunPosition, setSunPosition] = useState({ x: 90, y: 90, z: 90 });
-
+  // const [isLoading, setLoading] = useState(true);
   useEffect(() => {
+    if (!mountRef.current) return; 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -92,7 +94,7 @@ const ModelViewer = ({
     ground.position.y = 0;
     ground.receiveShadow = true;
     scene.add(ground);
-
+    
     const mtlLoader = new MTLLoader();
     mtlLoader.setPath(modelPath);
     mtlLoader.load(mtlFile, (materials) => {
@@ -131,10 +133,15 @@ const ModelViewer = ({
                 // Calculate the height of the building by getting its bounding box
                 const boundingBox = new THREE.Box3().setFromObject(child);
                 const height = boundingBox.max.y - boundingBox.min.y;
+                // setLoading(false);
+                // setLoading(false);
               }
+              // console.log("Building Load Complete")
             });
-
+            
+            // console.log("Building Load Complete")
             object.scale.set(modelScale, modelScale, modelScale);
+            
           },
           undefined,
           (error) => {

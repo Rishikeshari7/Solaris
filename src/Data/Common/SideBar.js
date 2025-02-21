@@ -12,10 +12,10 @@ export const sideNavData = [
       title: "Shadow simulation",
       link: "/shadow-simulation",
     },
-    // {
-    //   title: "BIPV Reports",
-    //   link: "/BIPV-reports",
-    // },
+    {
+      title: "BIPV Reports",
+      link: "/BIPV-reports",
+    },
     {
       title: "Heat Map",
       link: "/heat-map",
