@@ -16,7 +16,16 @@ const InputSelection = ({
   const [dropdownVisible, setDropdownVisible] = useState(false);
 
   return (
-    <div className="relative">
+    <>
+
+{dropdownVisible && (
+        <div
+          className="fixed inset-0 bg-black/40 z-40"
+          onClick={() => setDropdownVisible(false)}
+        ></div>
+      )}
+
+      <div className="relative z-50">
       {/* Main Dropdown Toggle */}
       <div
         className="w-60 bg-backgroundYellow float-right p-3 -m-8 mt-2 rounded-l-xl font-semibold text-xl flex justify-between items-center cursor-pointer"
@@ -105,6 +114,8 @@ const InputSelection = ({
       </div>
       {/* Submit Button */}
     </div>
+    </>
+   
   );
 };
 

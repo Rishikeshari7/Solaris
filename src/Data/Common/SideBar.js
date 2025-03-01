@@ -25,11 +25,15 @@ export const sideNavData = [
       link: "/impact-simulator",
     },
     {
+      title: "Estimator ",
+      link: "/estimator",
+    },
+    {
       title: "Settings",
-      link: "/settings",
+      link: "#",         // /settings
     },
     {
       title: "Log out",
-      link: "/log-out",
+      link: "#",      // /log-out
     },
 ];
