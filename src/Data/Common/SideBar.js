@@ -28,12 +28,12 @@ export const sideNavData = [
       title: "Estimator ",
       link: "/estimator",
     },
-    {
-      title: "Settings",
-      link: "#",         // /settings
-    },
-    {
-      title: "Log out",
-      link: "#",      // /log-out
-    },
+    // {
+    //   title: "Settings",
+    //   link: "#",         // /settings
+    // },
+    // {
+    //   title: "Log out",
+    //   link: "#",      // /log-out
+    // },
 ];
